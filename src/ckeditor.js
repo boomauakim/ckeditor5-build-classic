@@ -30,6 +30,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -58,7 +59,8 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	Alignment
+	Alignment,
+	SimpleUploadAdapter,
 ];
 
 // Editor configuration.
@@ -101,5 +103,17 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
+	language: 'en',
+	simpleUpload: {
+		// The URL that the images are uploaded to.
+		uploadUrl: process.env.REACT_APP_UPLOAD_URL,
+
+		// Enable the XMLHttpRequest.withCredentials property.
+		withCredentials: true,
+
+		// Headers sent along with the XMLHttpRequest to the upload server.
+		headers: {
+			Authorization: `Bearer ${process.env.REACT_APP_UPLOAD_TOKEN}`
+		}
+	}
 };
