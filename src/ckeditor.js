@@ -89,7 +89,7 @@ ClassicEditor.defaultConfig = {
 	},
 	image: {
 		styles: [
-			'alignLeft', 'alignCenter', 'alignRight'
+				'alignLeft', 'alignCenter', 'alignRight'
 		],
 		resizeOptions: [
 				{
