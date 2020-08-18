@@ -45,7 +45,11 @@ ClassicEditor.builtinPlugins = [
 	CKFinder,
 	EasyImage,
 	Heading,
-	Image, ImageToolbar, ImageCaption, ImageStyle, ImageResize,
+	Image, 
+	ImageToolbar, 
+	ImageCaption, 
+	ImageStyle, 
+	ImageResize,
 	ImageUpload,
 	Indent,
 	Link,
@@ -56,8 +60,7 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	Alignment,
-	ImageResize
+	Alignment
 ];
 
 // Editor configuration.
@@ -85,11 +88,6 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	image: {
-		styles: [
-			'alignLeft', 
-			'alignCenter', 
-			'alignRight'
-		],
 		resizeOptions: [
 			{
 					name: 'imageResize:original',
